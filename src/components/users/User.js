@@ -3,6 +3,8 @@ import Spinner from "../layout/Spinner";
 import { Link } from "react-router-dom";
 import Repos from "../repos/Repos";
 import GithubContext from "../../contexts/github/githubContext";
+import { FaTimesCircle } from "react-icons/fa";
+import { FaCheckCircle } from "react-icons/fa";
 
 const User = ({ match }) => {
   const { getUser, loading, user, repos, getUserRepos } = useContext(
@@ -25,9 +27,9 @@ const User = ({ match }) => {
           <h6 className="card-subtitle text-muted">
             Hireable{" "}
             {hireable ? (
-              <i className="fas fa-check-circle text-success" />
+              <FaCheckCircle className="text-success" />
             ) : (
-              <i className="fas fa-times-circle text-warning" />
+              <FaTimesCircle className="text-danger" />
             )}
           </h6>
         </div>

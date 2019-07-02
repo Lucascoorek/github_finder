@@ -1,19 +1,14 @@
 import React from "react";
-import Icon from "../../assets/gitIcon.png";
 import { Link } from "react-router-dom";
+import { FaGithub } from "react-icons/fa";
 
 const Navbar = () => {
   return (
     <nav className="navbar navbar-dark bg-primary ">
       <div className="d-flex flex-row">
-        <img
-          style={{
-            height: "30px",
-            display: "block",
-            margin: "auto 5px auto 0"
-          }}
-          src={Icon}
-          alt="Github"
+        <FaGithub
+          className="text-white my-auto mr-1"
+          style={{ fontSize: "1.7rem" }}
         />{" "}
         <p className="navbar-brand display-6 my-auto">Github Finder</p>
       </div>
